@@ -12,7 +12,12 @@ let globalSwiftSettings: [SwiftSetting] = [
 var products: [Product] = [
   .executable(name: "sourcekit-lsp", targets: ["sourcekit-lsp"]),
   .library(name: "_SourceKitLSP", targets: ["SourceKitLSP"]),
-  .library(name: "LSPBindings", targets: ["LanguageServerProtocol", "LanguageServerProtocolJSONRPC"]),
+  .library(name: "LSPBindings", targets: [
+    "LanguageServerProtocol",
+    "LanguageServerProtocolJSONRPC",
+    "BuildSystemIntegration",
+    "SemanticIndex",
+  ]),
 ]
 
 var targets: [Target] = [
